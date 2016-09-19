@@ -34,5 +34,8 @@ setup(
         'dev': ['cython', 'numpydoc'],
         'test': ['coverage', 'pytest'],
     },
-
+    entry_points="""
+        [console_scripts]
+        {{ cookiecutter.project_name }}={{ cookiecutter.project_name }}.cli:cli
+    """
 )
